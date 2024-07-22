@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "f26bd296-2df3-40c7-995f-4b72327c0c92",
+		"name": "studentmanagment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "373545"
+	},
+	"item": [
+		{
+			"name": "getMyCourses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcyMTY4Njc2OSwiZXhwIjoxNzIxNjg3MDY5fQ.sn5DpkNHzklmPzA136RvxUXr5XJrfqaj-Kt7kdez3hg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/app/api/student/course/mycourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"app",
+						"api",
+						"student",
+						"course",
+						"mycourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user1\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/app/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"app",
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAvailableCourses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcyMTY4Njc2OSwiZXhwIjoxNzIxNjg3MDY5fQ.sn5DpkNHzklmPzA136RvxUXr5XJrfqaj-Kt7kdez3hg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/app/api/student/course/allcourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"app",
+						"api",
+						"student",
+						"course",
+						"allcourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcyMTY4NzA1OSwiZXhwIjoxNzIxNjg3MzU5fQ.0eNI8-b1VRk6TnHe0ARCkzrzpYhASD6A-HzJt6FUyuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseId\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/app/api/student/course/regist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"app",
+						"api",
+						"student",
+						"course",
+						"regist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcyMTY4NzA1OSwiZXhwIjoxNzIxNjg3MzU5fQ.0eNI8-b1VRk6TnHe0ARCkzrzpYhASD6A-HzJt6FUyuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseId\":2,\r\n    \"cancellationReason\": \"not need\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/app/api/student/course/cancelcourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"app",
+						"api",
+						"student",
+						"course",
+						"cancelcourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exportSchedule",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcyMTY4NzI3NywiZXhwIjoxNzIxNjg3NTc3fQ.WzeA7h7tMCigP68qzcnNWxHICh-BBjerRQLYoV8Vras",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/app/api/student/course/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"app",
+						"api",
+						"student",
+						"course",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
